@@ -15,6 +15,6 @@ If you can get [engo](https://engoengine.github.io/) running, you should be able
 The assets are not hosted on this repo. Instead, I'll post links here where you can download the assets yourself.
 
 The background tiles are all from [Kenney's Topdown Shooter Asset Pack](https://www.kenney.nl/assets/topdown-shooter)
-After you download that, put the file `topdown-shooter/Spritesheet/spritesheet_tiles.pnt` into the assets folder.
+After you download that, put the file `topdown-shooter/Spritesheet/spritesheet_tiles.png` into the assets folder.
 
 The dust bunnies, scrubber, and other assets are done by me, and can be found [here](https://www.skeleboystudios.com/assets/scrub/characters.png)
