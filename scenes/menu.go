@@ -1,8 +1,11 @@
 package scenes
 
 import (
+	"bytes"
 	"image/color"
 	"strconv"
+
+	"golang.org/x/image/font/gofont/gomono"
 
 	"github.com/EngoEngine/ecs"
 	"github.com/EngoEngine/engo"
@@ -28,12 +31,18 @@ func (s *MainMenuScene) Preload() {
 	engo.Files.Load("ui/yellow_circle.png")
 	engo.Files.Load("ui/green_panel.png")
 	engo.Files.Load("ui/about_store.png")
+
+	engo.Files.LoadReaderData("gofont.ttf", bytes.NewReader(gomono.TTF))
+
+	engo.Input.RegisterButton("Exit", engo.KeyEscape)
 }
 
 func (s *MainMenuScene) Setup(u engo.Updater) {
 	w, _ := u.(*ecs.World)
 
 	common.SetBackground(color.RGBA{R: 0xAD, G: 0xD8, B: 0xE6, A: 0xFF})
+
+	w.AddSystem(&systems.ExitSystem{})
 
 	var renderable *common.Renderable
 	var notrenderable *common.NotRenderable
