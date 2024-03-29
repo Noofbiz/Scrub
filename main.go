@@ -10,6 +10,7 @@ import (
 
 func main() {
 	common.AddShader(shaders.BubbleShader)
+	engo.RegisterScene(&scenes.MadeScene{})
 	engo.RegisterScene(&scenes.MainMenuScene{})
 	engo.Run(engo.RunOptions{
 		Title:                      "Scrub!",
@@ -19,5 +20,5 @@ func main() {
 		ApplicationMajorVersion:    0,
 		ApplicationMinorVersion:    1,
 		ApplicationRevisionVersion: 1,
-	}, &scenes.MainMenuScene{}) //&scenes.MadeScene{})
+	}, &scenes.SkeleScene{})
 }
